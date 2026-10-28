@@ -1,0 +1,24 @@
+{
+  "db_root": "<ANONYMIZED-PATH>",
+  "models": {
+	"llamabase_base_quantized": {
+      "path": "<ANONYMIZED-PATH>",
+      "quantization": "bitsandbytes",
+      "lora_path": null,
+      "dtype": "bfloat16"
+    },
+	"mistralbase_base_quantized": {
+      "path": "<ANONYMIZED-PATH>",
+      "quantization": "bitsandbytes",
+      "lora_path": null,
+      "dtype": "bfloat16"
+    }
+  },
+  "seeds": [1, 5, 15, 25, 35],
+  "num_splits": 1,
+  "max_concurrent_jobs": 8,
+  "batch_size": 50,
+  "max_token_count": 2000,
+  "TASK_Language": ["en", "nl", "zh"],
+  "context": ["en", "nl", "zh"]
+}

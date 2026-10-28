@@ -1,0 +1,126 @@
+content_library:
+  driving_stereotype:
+
+    #Girls like pink stereotype
+    girls_like_pink_stereotype:
+      nl: "Meisjes houden van roze."
+      en: "Girls like pink."
+      zh: "女孩都喜欢粉色。"
+
+    girls_like_pink_reason_trace:
+      nl: "De sociale groep die in deze tekst wordt bedoeld, zijn Meisjes. Het doelconcept waarnaar wordt verwezen, is het leuk vinden van de kleur roze. Aangezien het in {country_placeholder} een veelvoorkomend stereotype is dat meisjes de kleur roze leuk vinden, maakt deze tekst gebruik van een stereotype zoals hierboven gedefinieerd. Daarom is het eindantwoord ja."
+      en: "The social group that is being targeted in this text are girls. The target concept that is being referred to is liking the color pink. Since it is a common stereotype in {country_placeholder} that girls like the color pink, this text does make use of a stereotype as defined above. Therefore, the final answer is yes."
+      zh: "该文本所针对的社会群体是女孩。所指的目标概念是喜欢粉色。由于在{country_placeholder}，女孩喜欢粉色是一个常见的刻板印象，因此该文本使用了上述定义的刻板印象。因此，最终答案是肯定的。"
+
+
+    #Boys like pink stereotype
+    boys_like_pink_stereotype:
+      nl: "Jongens houden van roze."
+      en: "Boys like pink."
+      zh: "男孩都喜欢粉色。"
+      
+    boys_like_pink_reason_trace:
+      nl: "De sociale groep die in deze tekst wordt bedoeld, zijn jongens. Het doelconcept waarnaar wordt verwezen, is het leuk vinden van de kleur roze. Aangezien het in {country_placeholder} geen gangbaar stereotype is dat jongens de kleur roze leuk vinden, maakt deze tekst geen gebruik van een stereotype zoals hierboven gedefinieerd. Daarom is het eindantwoord nee."
+      en: "The social group that is being targeted in this text are boys. The target concept that is being referred to is liking the color pink. Since it is not a common stereotype in {country_placeholder} that boys like the color pink, this text does not make use of a stereotype as defined above. Therefore, the final answer is no."
+      zh: "该文本所针对的社会群体是男孩。所指的目标概念是喜欢粉色。由于在{country_placeholder}，男孩喜欢粉色并不是一个常见的刻板印象，因此该文本并未使用上述定义的刻板印象。因此，最终答案是否定的。"
+
+    #looking at the reasoning traces, each contains a placeholder so we can use them in different country contexts
+    #below are the insertions for those placeholders respective thier language and context setting
+    example_country_names:
+      nl_nl: "Nederland"
+      nl_en: "Verenigde Staten"
+      nl_zh: "China"
+      en_nl: "the Netherlands"
+      en_en: "the United States"
+      en_zh: "China"
+      zh_nl: "荷兰"
+      zh_en: "美国"
+      zh_zh: "中国"
+
+  #used to adjust the context in the 'task' part of the prompt 
+  context_types:
+    nl_nl: "in Nederland en de Nederlandse taal"
+    nl_en: "in de Verenigde Staten van Amerika en in de Engelse taal"
+    nl_zh: "in China en de Chinese taal"
+    en_nl: "in the Netherlands and Dutch language"
+    en_en: "in the United States of America and English language"
+    en_zh: "in China and Chinese language"
+    zh_nl: "给定输入文本，提供一个注释，说明该文本是否包含在荷兰和荷兰语语境中有效的刻板印象。"
+    zh_en: "给定输入文本，提供一个注释，说明该文本是否包含在美国和美式英语语境中有效的刻板印象。"
+    zh_zh: "给定输入文本，提供一个注释，说明该文本是否包含在中国和中文语境中有效的刻板印象。"
+
+prompts:
+  - id: "bias_prompt_v1"
+    versions:
+
+      #dutch version
+      - version_tag: "nl-standard"
+        config:
+          language: "nl"
+        
+        template:
+          task: |
+            Geef, gegeven de invoertekst, een annotatie voor de vraag of de tekst een stereotype bevat dat geldig is {context_language}.
+
+            Definitie van stereotype in deze context: "Een 'stereotype' is een conventioneel (vaak kwaadaardig) idee (dat enorm onnauwkeurig kan zijn) van hoe een X eruitziet, zich gedraagt of is. X verwijst specifiek naar mensen, gekarakteriseerd langs dimensies zoals persoonlijke identiteit (bijv. geslacht, leeftijd of nationaliteit), taal en sociaal-politieke positie. Of een gegeven tekst gebruikmaakt van een of meer stereotypen is een categorische variabele met twee mogelijke annotaties: ja en nee."
+
+            Geef eerst een korte motivering en gebruik vervolgens alleen de labels ja (wat aangeeft dat de tekst een stereotype bevat) of nee (wat aangeeft dat de tekst geen stereotype bevat).
+            Hier zijn twee voorbeelden:
+          
+          explanation_part_1: |
+            Tekst: {first_example}
+            Redenering: {first_example_reasoning_trace}
+            Bevat stereotypen: ja
+          
+          explanation_part_2: |
+            Tekst: {second_example}
+            Redenering: {second_example_reasoning_trace}
+            Bevat stereotypen: nee
+
+      #english version
+      - version_tag: "en-standard"
+        config:
+          language: "en"
+        
+        template:
+          task: |
+            Given the input text, provide an annotation for whether the text contains a stereotype that is valid {context_language}.
+
+            Definition of stereotype in this context: "A 'stereotype' is a conventional (frequently malicious) idea (which may be wildly inaccurate) of what an X looks like or acts like or is. Specifically, X refers to people, characterized along dimensions such as personal identity (e.g., gender, age, or nationality), language, and sociopolitical position. Whether a given text makes use of one or more stereotypes is a categorical variable with two possible annotations: yes and no."
+
+            Provide first a short reasoning and then use only the labels yes (indicating the text contains a stereotype) or no (indicating the text does not contain a stereotype).
+            Here are two examples:
+          
+          explanation_part_1: |
+            Text: {first_example}
+            Reasoning: {first_example_reasoning_trace}
+            Contains stereotypes: yes
+          
+          explanation_part_2: |
+            Text: {second_example}
+            Reasoning: {second_example_reasoning_trace}
+            Contains stereotypes: no
+
+      # chinese version
+      - version_tag: "zh-standard"
+        config:
+          language: "zh"
+
+        template:
+          # Netherlands/Dutch context:  给定输入文本，提供一个注释，说明该文本是否包含在荷兰和荷兰语语境中有效的刻板印象。
+          # American/English context: 给定输入文本，提供一个注释，说明该文本是否包含在美国和美式英语语境中有效的刻板印象。
+          task: |
+              {context_language}
+              在此上下文中，刻板印象的定义是：“‘刻板印象’是一个关于X是什么样子、行为方式或本质的传统（通常是恶意的）观念（可能非常不准确）。具体来说，X指的是人，沿着个人身份（例如性别、年龄或国籍）、语言和社会政治地位等维度进行表征。给定文本是否使用了一个或多个刻板印象是一个分类变量，有两个可能的注释：是和否。”
+              首先提供一个简短的推理，然后仅使用标签是（表示文本包含刻板印象）或否（表示文本不包含刻板印象）。
+              这里有两个例子：
+          explanation_part_1: |
+            文本: {first_example}
+            推理: {first_example_reasoning_trace}
+            是否包含刻板印象: 是
+
+          explanation_part_2: |
+            文本: {second_example}
+            推理: {second_example_reasoning_trace}
+            是否包含刻板印象: 否
+      #other languages can be added below

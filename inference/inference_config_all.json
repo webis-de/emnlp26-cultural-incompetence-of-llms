@@ -1,0 +1,156 @@
+{
+  "db_root": "<ANONYMIZED-PATH>",
+  "models": {
+	"llama31_base_quantized": {
+      "path": "<ANONYMIZED-PATH>",
+      "quantization": "bitsandbytes",
+      "lora_path": null,
+      "dtype": "bfloat16"
+    },
+	"llama31_ultrachat_en": {
+      "path": "<ANONYMIZED-PATH>",
+      "quantization": "bitsandbytes",
+      "lora_path": "<ANONYMIZED-PATH>",
+      "dtype": "bfloat16"
+    },
+	"llama31_ultrachat_nl": {
+      "path": "<ANONYMIZED-PATH>",
+      "quantization": "bitsandbytes",
+      "lora_path": "<ANONYMIZED-PATH>",
+      "dtype": "bfloat16"
+    },
+	"llama31_stackoverflow_nl": {
+      "path": "<ANONYMIZED-PATH>",
+      "quantization": "bitsandbytes",
+      "lora_path": "<ANONYMIZED-PATH>",
+      "dtype": "bfloat16"
+    },
+	"llama31_stackoverflow_en": {
+      "path": "<ANONYMIZED-PATH>",
+      "quantization": "bitsandbytes",
+      "lora_path": "<ANONYMIZED-PATH>",
+      "dtype": "bfloat16"
+    },
+	"llama31_no_robots_en": {
+      "path": "<ANONYMIZED-PATH>",
+      "quantization": "bitsandbytes",
+      "lora_path": "<ANONYMIZED-PATH>",
+      "dtype": "bfloat16"
+    },
+	"llama31_no_robots_nl": {
+      "path": "<ANONYMIZED-PATH>",
+      "quantization": "bitsandbytes",
+      "lora_path": "<ANONYMIZED-PATH>",
+      "dtype": "bfloat16"
+    },
+	"llama31_belle_zh": {
+      "path": "<ANONYMIZED-PATH>",
+      "quantization": "bitsandbytes",
+      "lora_path": "<ANONYMIZED-PATH>",
+      "dtype": "bfloat16"
+    },
+	"qwen3_base_quantized": {
+      "path": "<ANONYMIZED-PATH>",
+      "quantization": "bitsandbytes",
+      "lora_path": null,
+      "dtype": "bfloat16"
+    },
+	"qwen3_ultrachat_en": {
+      "path": "<ANONYMIZED-PATH>",
+      "quantization": "bitsandbytes",
+      "lora_path": "<ANONYMIZED-PATH>",
+      "dtype": "bfloat16"
+    },
+	"qwen3_ultrachat_nl": {
+      "path": "<ANONYMIZED-PATH>",
+      "quantization": "bitsandbytes",
+      "lora_path": "<ANONYMIZED-PATH>",
+      "dtype": "bfloat16"
+    },
+	"qwen3_stackoverflow_nl": {
+      "path": "<ANONYMIZED-PATH>",
+      "quantization": "bitsandbytes",
+      "lora_path": "<ANONYMIZED-PATH>",
+      "dtype": "bfloat16"
+    },
+	"qwen3_stackoverflow_en": {
+      "path": "<ANONYMIZED-PATH>",
+      "quantization": "bitsandbytes",
+      "lora_path": "<ANONYMIZED-PATH>",
+      "dtype": "bfloat16"
+    },
+	"qwen3_no_robots_en": {
+      "path": "<ANONYMIZED-PATH>",
+      "quantization": "bitsandbytes",
+      "lora_path": "<ANONYMIZED-PATH>",
+      "dtype": "bfloat16"
+    },
+	"qwen3_no_robots_nl": {
+      "path": "<ANONYMIZED-PATH>",
+      "quantization": "bitsandbytes",
+      "lora_path": "<ANONYMIZED-PATH>",
+      "dtype": "bfloat16"
+    },
+	"qwen3_belle_zh": {
+      "path": "<ANONYMIZED-PATH>",
+      "quantization": "bitsandbytes",
+      "lora_path": "<ANONYMIZED-PATH>",
+      "dtype": "bfloat16"
+    },
+	"mistral_base_quantized": {
+      "path": "<ANONYMIZED-PATH>",
+      "quantization": "bitsandbytes",
+      "lora_path": null,
+      "dtype": "bfloat16"
+    },
+	"mistral_ultrachat_en": {
+      "path": "<ANONYMIZED-PATH>",
+      "quantization": "bitsandbytes",
+      "lora_path": "<ANONYMIZED-PATH>",
+      "dtype": "bfloat16"
+    },
+	"mistral_ultrachat_nl": {
+      "path": "<ANONYMIZED-PATH>",
+      "quantization": "bitsandbytes",
+      "lora_path": "<ANONYMIZED-PATH>",
+      "dtype": "bfloat16"
+    },
+	"mistral_stackoverflow_nl": {
+      "path": "<ANONYMIZED-PATH>",
+      "quantization": "bitsandbytes",
+      "lora_path": "<ANONYMIZED-PATH>",
+      "dtype": "bfloat16"
+    },
+	"mistral_stackoverflow_en": {
+      "path": "<ANONYMIZED-PATH>",
+      "quantization": "bitsandbytes",
+      "lora_path": "<ANONYMIZED-PATH>",
+      "dtype": "bfloat16"
+    },
+	"mistral_no_robots_en": {
+      "path": "<ANONYMIZED-PATH>",
+      "quantization": "bitsandbytes",
+      "lora_path": "<ANONYMIZED-PATH>",
+      "dtype": "bfloat16"
+    },
+	"mistral_no_robots_nl": {
+      "path": "<ANONYMIZED-PATH>",
+      "quantization": "bitsandbytes",
+      "lora_path": "<ANONYMIZED-PATH>",
+      "dtype": "bfloat16"
+    },
+	"mistral_belle_zh": {
+      "path": "<ANONYMIZED-PATH>",
+      "quantization": "bitsandbytes",
+      "lora_path": "<ANONYMIZED-PATH>",
+      "dtype": "bfloat16"
+    }
+  },
+  "seeds": [1, 5, 15, 25, 35],
+  "num_splits": 1,
+  "max_concurrent_jobs": 12,
+  "batch_size": 50,
+  "max_token_count": 2048,
+  "TASK_Language": ["en", "nl", "zh"],
+  "context": ["en", "nl", "zh"]
+}
