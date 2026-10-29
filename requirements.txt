@@ -33,7 +33,7 @@ docstring-parser==0.16
 exceptiongroup==1.2.2
 executing==2.1.0
 fasttext @ git+https://github.com/cfculhane/fastText@4a4451337ae6b476b9c584b97776c8c3eb4b27c5
-filelock==3.16.1
+filelock==4.2.1
 floret==0.10.5
 fonttools==4.55.0
 frozenlist==1.5.0
