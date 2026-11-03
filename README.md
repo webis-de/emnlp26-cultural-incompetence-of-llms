@@ -28,7 +28,7 @@ The pipeline has four steps: (1) prepare the instruction-tuning data, (2) instru
 
 Trained models can be found [here](https://huggingface.co/webis/emnlp26-cultural-incompetence-of-llms-models).
 
-Predictions of all models and subsampled datasets can be found [here](https://huggingface.co/datasets/mspl/emnlp26-cultural-incompetence-of-llms-data).
+Predictions of all models and subsampled datasets can be found [here](https://huggingface.co/datasets/mspl/emnlp26-cultural-incompetence-of-llms-predictions).
 
 > [!NOTE]
 > All experiments were conducted using Python 3.10.18
