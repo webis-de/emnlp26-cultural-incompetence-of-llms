@@ -26,6 +26,10 @@ For details on the approach, architecture and idea, please see the published pap
 
 The pipeline has four steps: (1) prepare the instruction-tuning data, (2) instruction-tune the models with QLoRA, (3) run inference on SHADES, and (4) evaluate.
 
+Trained models can be found [here](https://huggingface.co/webis/emnlp26-cultural-incompetence-of-llms-models).
+
+Predictions of all models and subsampled datasets can be found [here](https://huggingface.co/datasets/mspl/emnlp26-cultural-incompetence-of-llms-data).
+
 > [!NOTE]
 > All experiments were conducted using Python 3.10.18
 
