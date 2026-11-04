@@ -78,7 +78,7 @@ murmurhash==1.0.11
 narwhals==1.14.2
 nest-asyncio==1.6.0
 networkx==3.4.2
-nltk==3.9.1
+nltk==3.10.4
 numexpr==2.10.2
 numpy==1.26.4
 nvidia-cublas-cu12==12.4.5.8
