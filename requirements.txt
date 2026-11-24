@@ -105,7 +105,7 @@ polars==1.15.0
 preshed==3.0.9
 prompt-toolkit==3.0.48
 propcache==0.2.1
-protobuf==6.31.1
+protobuf==6.33.5
 psutil==6.1.0
 ptyprocess==0.7.0
 pure-eval==0.2.3
