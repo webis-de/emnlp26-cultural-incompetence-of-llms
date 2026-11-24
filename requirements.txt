@@ -163,7 +163,7 @@ triton==3.1.0
 typer==0.13.1
 typing-extensions==4.12.2
 tzdata==2024.2
-urllib3==2.2.3
+urllib3==2.8.0
 vegafusion==2.0.1
 vl-convert-python==1.7.0
 wandb==0.21.0
