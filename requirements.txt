@@ -134,7 +134,7 @@ seaborn==0.13.2
 sentence-transformers==5.0.0
 sentencepiece==0.2.0
 sentry-sdk==2.33.2
-setuptools==75.6.0
+setuptools==84.1.0
 shellingham==1.5.4
 simple-parsing==0.1.6
 six==1.16.0
