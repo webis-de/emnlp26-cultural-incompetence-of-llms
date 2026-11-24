@@ -113,7 +113,7 @@ pyarrow==18.1.0
 pybind11==2.13.6
 pydantic==2.10.2
 pydantic-core==2.27.1
-pygments==2.18.0
+pygments==2.20.0
 pyldavis==3.4.1
 pyparsing==3.2.0
 pyphen==0.17.0
